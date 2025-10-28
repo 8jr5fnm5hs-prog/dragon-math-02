@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+h1 {
+  font-size: 2em;
+  color: #ffcb05;
+  margin-top: 20px;
+}
+#game-container {
+  display: none;
+}
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fadein 2s;
+}
+button {
+  background-color: #ffcb05;
+  border: none;
+  color: #222;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+#dragon, #equation, #message {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
