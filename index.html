@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐉 Dragon Math: Batalla Interactiva</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="start-screen">
+  <h1>🐉 Dragon Math: Batalla Interactiva</h1>
+  <p>Selecciona tu nivel de dificultad y vence a los dragones.</p>
+  <button onclick="showInstructions()">📖 Cómo jugar</button>
+  <div id="instructions" style="display:none;">
+    <p>1. Elige la dificultad: Fácil, Medio o Difícil.<br>
+    2. Cada nivel muestra una ecuación cuadrática.<br>
+    3. Selecciona la respuesta correcta entre 3 opciones.<br>
+    4. Cada acierto suma puntos, cada error resta una vida.<br>
+    5. Vence a todos los dragones y al dragón bonus.</p>
+    <button onclick="hideInstructions()">Cerrar</button>
+  </div>
+  <div id="difficulty-selection">
+    <button onclick="startGame('Fácil')">Fácil</button>
+    <button onclick="startGame('Medio')">Medio</button>
+    <button onclick="startGame('Difícil')">Difícil</button>
+  </div>
+</div>
+
+<div id="game-container">
+  <h1 id="level-title"></h1>
+  <p id="dragon"></p>
+  <p id="equation"></p>
+  <div id="options"></div>
+  <p id="message"></p>
+  <p>Puntos: <span id="points">0</span> | Vidas: <span id="lives">3</span></p>
+  <button id="sound-toggle" onclick="toggleSound()">🔊 Silenciar / Activar</button>
+</div>
+
+<audio id="battle-music" loop>
+  <source src="assets/battle-theme.mp3" type="audio/mpeg">
+</audio>
+<audio id="dragon-roar">
+  <source src="assets/dragon-roar.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
